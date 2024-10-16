@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <form>
+        <div class="display">
+            <h1> Calculadora </h1>
+            <input type="text" id="display" readonly>
+            <!-- id="display" hace que se muestren los valores en JS -->
+        </div> 
+
+        <!-- GPT: el atrubuto "onclick" hace que se agregue el valor al display en JS -->
+        <button type="button" id="siete" onclick="appendToDisplay('7')">7</button>
+        <button type="button" id="ocho" onclick="appendToDisplay('8')">8</button>
+        <button type="button" id="nueve" onclick="appendToDisplay('9')">9</button>
+        <button class="btn" type="button" id="division" onclick="appendToDisplay('/')"><i class="fa-solid fa-divide"></i></button>
+        <button class="btn" type="button" id="clear" onclick="clearDisplay()">C</button>
+
+        <button type="button" id="cuatro" onclick="appendToDisplay('4')">4</button>
+        <button type="button" id="cinco" onclick="appendToDisplay('5')">5</button>
+        <button type="button" id="seis" onclick="appendToDisplay('6')">6</button>
+        <button class="btn" type="button" id="multiplicacion" onclick="appendToDisplay('*')">X</button>
+        <button class="btn" type="button" id="back" onclick="backspace()"><i class="fa-solid fa-delete-left"></i></button>
+        
+        <button type="button" id="uno" onclick="appendToDisplay('1')">1</button>
+        <button type="button" id="dos" onclick="appendToDisplay('2')">2</button>
+        <button type="button" id="tres" onclick="appendToDisplay('3')">3</button>
+        <button class="btn" type="button" id="resta" onclick="appendToDisplay('-')">-</button>
+        <button class="btn" type="button" id="igual" onclick="calculate()">=</button>
+
+        <button type="button" id="doble-cero" onclick="appendToDisplay('00')">00</button>
+        <button type="button" id="cero" onclick="appendToDisplay('0')">0</button>
+        <button type="button" id="decimal" onclick="appendToDisplay('.')">.</button>
+        <button class="btn" type="button" id="suma" onclick="appendToDisplay('+')">+</button>
+    </form>
+
+    <script src="main.js"></script>
+</body>
+</html>

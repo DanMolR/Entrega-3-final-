@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+:root {
+    --color-background: #1c2841;
+    --color-light: #f0ffff;
+    --color-green: turquoise;
+}
+
+body {
+    background-color: var(--color-background);
+    border: var(--color-green) 2px solid;
+    border-bottom-right-radius: 35px;
+    border-bottom-left-radius: 35px; 
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    max-width: ;width: 325px;
+    margin: auto;
+}
+
+form {
+    width: 300px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: 90px repeat(4, 60px);
+    overflow: hidden;
+}
+
+.display {
+    grid-column: 1 / span 5;
+    grid-row: 1;
+    position: relative;
+
+    h1 {
+        color: var(--color-light);
+        font-weight: 100;
+        text-align: center;
+        position: absolute;
+        z-index: 10;
+        font-size: 1rem;
+        transform: translate(50%, 14px);
+        background-color: var(--color-background);
+        display: block;
+        padding: 0 15px;
+        letter-spacing: 3px;
+    }
+
+    input {
+        background-color: var(--color-background);
+        color: var(--color-light);
+        border: var(--color-light) 2px solid;
+        width: 300px;
+        height: 55px;
+        margin: 5px 0;
+        border-radius: 5px;
+        position: absolute;
+        padding: 0 20px;
+        font-size: 1.5rem;
+        margin: 25px 0;
+        text-align: right;
+    }
+}
+
+button {
+    background-color: var(--color-background);
+    color: var(--color-green);
+    border: var(--color-green) 2px solid;
+    margin: 3px;
+    min-width: 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    /* transition-property: font-size;
+    transition-duration: .05s; */
+}
+button:hover {
+    box-shadow: #66ff0044 0 0 10px 2px inset;
+    box-shadow: rgba(64, 224, 208, 0.316) 0 0 10px 3px inset;
+}
+button:active {
+    font-size: 1.8rem;
+    border: var(--color-light) 2px solid;
+    color: var(--color-light);
+    font-weight: bolder;
+    box-shadow: rgba(255, 255, 255, 0.181) 0 0 10px 10px inset;
+}
+.btn {
+    border: hotpink 2px solid;
+    color: hotpink;
+}
+.btn:hover {
+    box-shadow: rgba(255, 105, 180, 0.4) 0 0 10px 3px inset;
+}
+
+#siete {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#ocho {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#nueve {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#division {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+#clear-entry {
+    grid-column: 5;
+    grid-row: 2;
+}
+
+#cuatro {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+#cinco {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+#seis {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+#multiplicacion {
+    grid-column: 4;
+    grid-row: 3;
+}
+
+#back {
+    grid-column: 5;
+    grid-row: 3;
+}
+
+#clear {
+    grid-column: 5;
+    grid-row: 2;
+}
+
+#uno {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+#dos {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+#tres {
+    grid-column: 3;
+    grid-row: 4;
+}
+
+#resta {
+    grid-column: 4;
+    grid-row: 4;
+}
+
+#igual {
+    grid-column: 5;
+    grid-row: 4 / span 2;
+}
+
+#doble-cero {
+    grid-column: 1;
+    grid-row: 5;
+}
+
+#cero {
+    grid-column: 2;
+    grid-row: 5;
+}
+
+#decimal {
+    grid-column: 3;
+    grid-row: 5;
+}
+
+#suma {
+    grid-column: 4;
+    grid-row: 5;
+}
+
+/* sugerencia de ChatGPT */
+.display-small-text.display-small-text {
+    font-size: 1rem; /* Tamaño más pequeño para que quepa cuando arroja error de división entre cero*/
+    text-align: center;
+}
