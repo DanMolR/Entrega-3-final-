@@ -184,12 +184,44 @@ function calc_3_generadorDePorcentaje() {
 }
 
 
+// CALCULADORA NIVEL 4
+
+function calc_4_verificarParidad () {
+    let valor = parseFloat(prompt("ingresa un valor para verificar su Paridad"))
+    // valor = 3;
+    // valor = 8;
+
+    if (valor % 2 === 0) {
+        return "el número que ingresaste es par"
+    } else {
+        return "el número que ingresaste es impar"
+    }
+}
+
+function calc_4_sumarSecuencia () {
+    let valor1 = parseFloat(prompt("Vamos a sumar la secuencia de dos números. Ingresa el primer valor"));
+    let valor2 = parseFloat(prompt("Vamos a sumar la secuencia de dos números. Ingresa el primer valor"));
+
+    // let valor1;
+    // valor1 = 5
+    // let valor2;
+    // valor2 = 8
+
+    let sumatoria = 0
+
+    for ( i = valor1; i <= valor2; i++) {
+        sumatoria += i
+    }    
+    console.log(`La sumatoria de la secuencia entre ${valor1} y ${valor2} es igual a ${sumatoria}`);
+    
+}
 
 
 
-// CALCULADORA NIVEL 4 (prueba: tutorial + chatGPT)
 
-/////////// Calculadora VERSIÓN 4.0 (tutorial) ////////////
+// CALCULADORA NIVEL 5 (prueba: tutorial + chatGPT)
+
+/////////// Calculadora VERSIÓN 5.0 (tutorial) ////////////
 // tutorial: https://www.youtube.com/watch?v=I5kj-YsmWjM
 
 
@@ -220,7 +252,7 @@ function calculate() {
 */
 
 
-//////////// Calculadora VERSIÓN 4.1 Mejorado por ChatGPT ///////////  
+//////////// Calculadora VERSIÓN 5.1 Mejorado por ChatGPT ///////////  
 
 const display = document.getElementById("display");
 let calculoCompletado = false; // GPT: bandera que indica si un cálculo ha terminado
@@ -445,7 +477,7 @@ FUNCIÓN backspace():
 FUNCIÓN calculate():
     TRATAR:
         SI display está vacío O termina con un operador:
-            Mostrar "lo que estaba en el display" en display osea no cambiar y salir de la función
+            Mostrar "0" en display osea no cambiar y salir de la función
 
         SI display contiene '/0':
             Mostrar "No se puede dividir entre cero" en display
